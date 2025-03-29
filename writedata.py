@@ -46,5 +46,8 @@ def creative_wop():
     user_list = os.listdir(user)
     if ".wop" not in user_list:
         os.makedirs(folder)
+        file_path = os.path.join(folder, "project.xwd")
+        file = open(file_path, "a")
+        file.close()
     log(logs="creative wop folder" + "\n")
     return
