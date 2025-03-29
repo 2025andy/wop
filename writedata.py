@@ -46,5 +46,5 @@ def creative_wop():
     user_list = os.listdir(user)
     if ".wop" not in user_list:
         os.makedirs(folder)
-    log(logs="creative wop folder")
+    log(logs="creative wop folder" + "\n")
     return

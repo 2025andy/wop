@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import os
+import writedata
 
 ve = "Beta V0.1"
 def main():
@@ -22,12 +23,12 @@ def main():
     home_frame.pack()
 
     # 标题
+    writedata.creative_wop()
     title_home = tk.Label(home_frame, text=f"Welcome ! {os.getlogin()}", font=10)
     title_home.pack()
 
     # 添加Home栏
     main_menu.add_command(label="Home")
-
 
     # 显示Menu
     root.config(menu=main_menu)
