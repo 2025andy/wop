@@ -42,5 +42,9 @@ def log(logs: str):
             file.close()
     return
 
-def new_wop():
+def creative_wop():
     user_list = os.listdir(user)
+    if ".wop" not in user_list:
+        os.makedirs(folder)
+    log(logs="creative wop folder")
+    return
