@@ -51,3 +51,22 @@ def creative_wop():
         file.close()
     log(logs="creative wop folder" + "\n")
     return
+
+def write_project_list(data: str):
+    user_list = os.listdir(user)
+    if ".wop" in user_list:
+        file_path = os.path.join(folder, "project.xwd")
+        file = open(file_path, "a")
+        file.write(data + "\n")
+        file.close()
+    else:
+        os.makedirs(folder)
+        file_path = os.path.join(folder, "project.xwd")
+        file = open(file_path, "a")
+        file.write(data + "\n")
+        file.close()
+    log(logs="write project list")
+    return
+
+if __name__ == '__main__':
+    write_project_list(data="beta")
