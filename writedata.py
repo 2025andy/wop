@@ -68,5 +68,15 @@ def write_project_list(data: str):
     log(logs="write project list")
     return
 
+def read_project_list():
+    user_list = os.listdir(user)
+    data = []
+    if ".wop" in user_list:
+        file_path = os.path.join(folder, "project.xwd")
+        file = open(file_path, "r")
+        data = file.readlines()
+        file.close()
+    return data
+
 if __name__ == '__main__':
-    write_project_list(data="beta")
+    print(read_project_list())

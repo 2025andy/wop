@@ -20,6 +20,9 @@ def main():
     #添加chFrame
     ch_frame = tk.Frame(root)
 
+    # 添加projectFrame
+    project_frame = tk.Frame(root)
+
     # 默认显示
     home_frame.pack()
 
@@ -47,6 +50,14 @@ def main():
 
     new_project_button = tk.Button(ch_frame, text="New project", font=10, padx=10, pady=10)
     new_project_button.pack(padx=20, pady=20)
+
+    # 创建projectFrame组件
+
+    project_title = tk.Label(project_frame, text="Your project: ")
+
+    project_list = writedata.read_project_list()
+
+
 
     def show_home():
         ch_frame.pack_forget()
